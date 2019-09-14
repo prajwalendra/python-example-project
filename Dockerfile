@@ -5,7 +5,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Bundle app source
-COPY . /usr/src/app && chgrp -R 0 /usr/src/app && chmod -R g=u /usr/src/app 
+COPY . /usr/src/app 
+RUN  chgrp -R 0 /usr/src/app && chmod -R g=u /usr/src/app 
 
 USER 1001
 
